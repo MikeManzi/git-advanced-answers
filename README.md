@@ -773,6 +773,83 @@ $
 
 - In specific situations, you might need to detach HEAD from your current branch. Research `git checkout <commit-hash>` (replace with the desired commit hash) to understand this concept.
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/improved-branch-name)
+$ git log
+commit ac76b27ba90afefe1b70a6ee450a43d55306dd94 (HEAD -> ft/improved-branch-name, main)
+Merge: 98af5da 37ff11f
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 19:19:00 2024 +0200
+
+    Merge branch 'ft/new-feature'
+
+commit 98af5da978c464b161dfc0d0d484d4b9aa6f52e5
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 19:17:09 2024 +0200
+
+    chore: Updated project readme
+
+commit 37ff11fe3c7aebc9828f9006afcece06416c2cf7
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 18:27:19 2024 +0200
+
+    chore: Implemented core functionality for new feature
+
+commit ff82239d7eb3bc4cb31c596567d84fce4031b4e0
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 14:50:39 2024 +0200
+
+    Implemented test 5
+
+commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+commit c305411b3a13778fb255b5b5f1f59002c7cca303
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+
+    create fourth file
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/improved-branch-name)
+$ git checkout 98af5da978c464b161dfc0d0d484d4b9aa6f52e5
+Note: switching to '98af5da978c464b161dfc0d0d484d4b9aa6f52e5'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 98af5da chore: Updated project readme
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git ((98af5da...))
+$ git switch -
+Previous HEAD position was 98af5da chore: Updated project readme
+Switched to branch 'ft/improved-branch-name'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/improved-branch-name)
+$
+
+```
+
 **Part 3: Advanced Workflows (10+ Challenges)**
 
 1. **Stashing Changes:**
