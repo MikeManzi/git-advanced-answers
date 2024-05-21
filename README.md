@@ -589,6 +589,21 @@ $
    - Create a new file named `feature.txt` in this branch and add some content to it.
    - Commit these changes with a descriptive message like "Implemented core functionality for new feature".
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
+$ git add .
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
+$ git commit -m"chore: Implemented core functionality for new feature"
+[ft/new-feature 37ff11f] chore: Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
+$ 
+
+```
+
 3. **Switching Back and Making More Changes:**
 
    - It's common to switch between branches during development.
