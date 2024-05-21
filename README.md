@@ -376,7 +376,7 @@ Author: MikeManzi <manzimike378@gmail.com>
 Date:   Tue May 21 13:49:08 2024 +0200
 
     create third and fourth files
-    
+
     create fourth file
 
 commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
@@ -406,9 +406,9 @@ Author: MikeManzi <manzimike378@gmail.com>
 Date:   Tue May 21 12:25:57 2024 +0200
 
     chore: create the first two files
-    
+
     chore: Create initial file
-    
+
     chore: Create second file
 
 commit c305411b3a13778fb255b5b5f1f59002c7cca303
@@ -416,7 +416,7 @@ Author: MikeManzi <manzimike378@gmail.com>
 Date:   Tue May 21 13:49:08 2024 +0200
 
     create third and fourth files
-    
+
     create fourth file
 
 ```
@@ -427,6 +427,108 @@ Date:   Tue May 21 13:49:08 2024 +0200
    - Imagine you only desire a specific commit from `ft/branch`. Research and use `git cherry-pick` to selectively bring that commit into your current branch which is `main`.
 
    learn more about `cherry-pick` [here](https://www.freecodecamp.org/news/git-cherry-pick-avoid-duplicate-commits/)
+
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/branch)
+$ git add .
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/branch)
+$  git commit -m"Implemented test 5"
+[ft/branch 6c1ac40] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/branch)
+$ git log
+commit 6c1ac400dce5dd24ae1bbc8fba2eb408b1ba6630 (HEAD -> ft/branch)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 14:50:39 2024 +0200
+
+    Implemented test 5
+
+commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be (main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+:...skipping...
+commit 6c1ac400dce5dd24ae1bbc8fba2eb408b1ba6630 (HEAD -> ft/branch)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 14:50:39 2024 +0200
+
+    Implemented test 5
+
+commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be (main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+commit c305411b3a13778fb255b5b5f1f59002c7cca303
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+
+    create fourth file
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git cherry-pick 6c1ac400dce5dd24ae1bbc8fba2eb408b1ba6630
+[main ff82239] Implemented test 5
+ Date: Tue May 21 14:50:39 2024 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit ff82239d7eb3bc4cb31c596567d84fce4031b4e0 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 14:50:39 2024 +0200
+
+    Implemented test 5
+
+commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+commit c305411b3a13778fb255b5b5f1f59002c7cca303
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+
+    create fourth file
+```
 
 9. **Visualizing Commit History (Bonus):**
 
