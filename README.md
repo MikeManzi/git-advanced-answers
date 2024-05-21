@@ -740,6 +740,20 @@ $
 
    **Challenge:** Try rebasing the `ft/new-branch-from-commit` branch onto the `main` branch. Remember, rebasing rewrites history, so use it with caution, especially in shared repositories. learn more about rebasing [here](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase#:~:text=From%20a%20content%20perspective%2C%20rebasing,them%20to%20the%20specified%20base.)
 
+
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-branch-from-commit)
+$ 
+```
+
 9. **Renaming Branches:**
 
    - Branch names can sometimes evolve. Let's rename `ft/new-branch-from-commit` to a more descriptive name.
