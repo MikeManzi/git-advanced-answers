@@ -638,6 +638,23 @@ $
 
    **Challenge:** Delete the `ft/new-feature` branch once you're confident the changes are integrated into `main`.
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git merge ft/new-feature
+Merge made by the 'ort' strategy.
+ feature.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 37ff11f).
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ 
+
+```
+
 6. **Creating a Branch from a Commit:**
 
    - You can also create a branch from a specific commit in your history.
