@@ -127,6 +127,55 @@ Date:   Tue May 21 12:25:57 2024 +0200
 
    **Challenge:** Use interactive rebasing with the `squash` command to achieve this. learn more about `squash` [here](https://mattstauffer.com/blog/squashing-git-commits-with-interactive-rebase/)
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 285f7adc918b6746722302de4f21b30782cc1019 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:58 2024 +0200
+
+    chore: Create third and fourth files
+
+commit 971a2418f40b6666e004a32d0271f1654a119262
+Author: MikeManzi <manzimike378@gmail.com
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: Create second file
+
+commit 1438792869560a2da326bacbdab0e933984f2789
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: Create initial file
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git rebase -i --root
+[detached HEAD 8248c41] chore: create the first two files
+ Date: Tue May 21 12:25:57 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 443af88ee6445dfbdea1c18c748ef9649c699931 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:58 2024 +0200
+
+    chore: Create third and fourth files
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+```
+
 4. **Splitting a Commit:**
 
    - Imagine "Create third and fourth files" describes too much at once. Separate them for better tracking with two different commit messages: "Create Third File" and "Create fourth file".
