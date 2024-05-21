@@ -273,6 +273,61 @@ Successfully rebased and updated refs/heads/main.
 
    **Challenge:** Utilize interactive rebasing with the `squash` command to achieve this advanced squash. **Check step 4**
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 70851ec1815948b8cbb01802a262de7556d0126d (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:50 2024 +0200
+
+    create fourth file
+
+commit 5b3e6ea4a031d2e8907ad24d1c57120641fa0c20
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third file
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git rebase -i Head~2
+[detached HEAD 0a42925] create third and fourth files
+ Date: Tue May 21 13:49:08 2024 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 0a4292517dc5890e0f987be44bfb5303ef1af7a5 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+
+    create fourth file
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+```
+
 6. **Dropping a Commit:**
 
    - We all make mistakes. Imagine needing to completely remove an unwanted commit from your history.
