@@ -534,6 +534,34 @@ Date:   Tue May 21 13:49:08 2024 +0200
 
    - Tools like `git log --graph` or a graphical Git client can help visualize your commit history. Explore these tools for a clearer understanding of your workflow.
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log --graph
+* commit ff82239d7eb3bc4cb31c596567d84fce4031b4e0 (HEAD -> main)
+| Author: MikeManzi <manzimike378@gmail.com>
+| Date:   Tue May 21 14:50:39 2024 +0200
+| 
+|     Implemented test 5
+| 
+* commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be
+| Author: MikeManzi <manzimike378@gmail.com>
+| Date:   Tue May 21 12:25:57 2024 +0200
+| 
+|     chore: create the first two files
+|     
+|     chore: Create initial file
+|     
+|     chore: Create second file
+| 
+* commit c305411b3a13778fb255b5b5f1f59002c7cca303
+  Author: MikeManzi <manzimike378@gmail.com>
+  Date:   Tue May 21 13:49:08 2024 +0200
+  
+      create third and fourth files
+      
+      create fourth file
+```
+
 10. **Understanding Reflogs (Bonus):**
 
 - Reflogs track Git operation history. Research about `git reflog` to learn how you can navigate back to previous states in your repository if needed.
