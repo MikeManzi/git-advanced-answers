@@ -336,6 +336,60 @@ Date:   Tue May 21 12:25:57 2024 +0200
 
    **Challenge:** Use `git rebase -i` to identify and remove the "Unwanted commit" commit, cleaning up your history. learn more about `dropping commits` [here](https://articles.assembla.com/en/articles/2941346-how-to-delete-commits-from-a-branch-in-git)
 
+```bash
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 945d29e56f70f52cd5405ebccc043974c803c512 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 14:19:33 2024 +0200
+pick 0a42925 create third and fourth files
+
+    Unwanted commit
+
+commit 0a4292517dc5890e0f987be44bfb5303ef1af7a5
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+
+    create fourth file
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git rebase -i Head~2
+Successfully rebased and updated refs/heads/main.
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 0a4292517dc5890e0f987be44bfb5303ef1af7a5 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+    
+    create fourth file
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+```
+
 7. **Reordering Commits:**
 
    - Delve deeper into `git rebase -i`. Can you rearrange commits within your history using this command? learn more about `ordering commits` [here](https://www.youtube.com/watch?v=V9KpcGO7nLo)
