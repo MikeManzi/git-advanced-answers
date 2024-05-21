@@ -394,6 +394,33 @@ Date:   Tue May 21 12:25:57 2024 +0200
 
    - Delve deeper into `git rebase -i`. Can you rearrange commits within your history using this command? learn more about `ordering commits` [here](https://www.youtube.com/watch?v=V9KpcGO7nLo)
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git rebase -i --root
+Successfully rebased and updated refs/heads/main.
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+    
+    chore: Create initial file
+    
+    chore: Create second file
+
+commit c305411b3a13778fb255b5b5f1f59002c7cca303
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 13:49:08 2024 +0200
+
+    create third and fourth files
+    
+    create fourth file
+
+```
+
 8. **Cherry-Picking Commits:**
 
    - Create a branch, call it `ft/branch`, and add a new file named `test5.md` with some content. Commit these changes with a message like "Implemented test 5".
