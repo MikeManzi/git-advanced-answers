@@ -182,6 +182,91 @@ Date:   Tue May 21 12:25:57 2024 +0200
 
    **Challenge:** Leverage `git reset` to separate the files into individual commits with distinct messages. learn more about `splitting commits` [here](https://dev.to/timmouskhelichvili/how-to-split-a-git-commit-into-multiple-ones-3g6f)
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git log
+commit 443af88ee6445dfbdea1c18c748ef9649c699931 (HEAD -> main)
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:58 2024 +0200
+
+    chore: Create third and fourth files
+
+commit 8248c4197a22a90026987236bbd3c6a7cd55a5f4
+Author: MikeManzi <manzimike378@gmail.com>
+Date:   Tue May 21 12:25:57 2024 +0200
+
+    chore: create the first two files
+
+    chore: Create initial file
+
+    chore: Create second file
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git rebase -i Head~1
+Stopped at 443af88...  chore: Create third and fourth files
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 8248c41
+Last command done (1 command done):
+   edit 443af88 chore: Create third and fourth files
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on '8248c41'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+nothing to commit, working tree clean
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git reset HEAD~
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git status
+interactive rebase in progress; onto 8248c41
+Last command done (1 command done):
+   edit 443af88 chore: Create third and fourth files
+No commands remaining.
+You are currently editing a commit while rebasing branch 'main' on '8248c41'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test3.md
+        test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git add test3.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git commit -m"create third file"
+[detached HEAD 5b3e6ea] create third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git add test4.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git commit -m"create fourth file"
+[detached HEAD 70851ec] create fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main|REBASE 1/1)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/main.
+```
+
 5. **Advanced Squashing:**
 
    - Let's explore more complex squashing. Can you combine the last two commits ("Create third file" and "Create fourth file") into a single commit named "Create third and fourth files"?
