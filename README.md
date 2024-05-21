@@ -540,25 +540,25 @@ $ git log --graph
 * commit ff82239d7eb3bc4cb31c596567d84fce4031b4e0 (HEAD -> main)
 | Author: MikeManzi <manzimike378@gmail.com>
 | Date:   Tue May 21 14:50:39 2024 +0200
-| 
+|
 |     Implemented test 5
-| 
+|
 * commit 077b3f71f611969c6f3d8ab2e0094e12ca73c0be
 | Author: MikeManzi <manzimike378@gmail.com>
 | Date:   Tue May 21 12:25:57 2024 +0200
-| 
+|
 |     chore: create the first two files
-|     
+|
 |     chore: Create initial file
-|     
+|
 |     chore: Create second file
-| 
+|
 * commit c305411b3a13778fb255b5b5f1f59002c7cca303
   Author: MikeManzi <manzimike378@gmail.com>
   Date:   Tue May 21 13:49:08 2024 +0200
-  
+
       create third and fourth files
-      
+
       create fourth file
 ```
 
@@ -580,7 +580,7 @@ $ git checkout -b ft/new-feature
 Switched to a new branch 'ft/new-feature'
 
 Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
-$ 
+$
 
 ```
 
@@ -600,7 +600,7 @@ $ git commit -m"chore: Implemented core functionality for new feature"
  create mode 100644 feature.txt
 
 Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
-$ 
+$
 
 ```
 
@@ -609,6 +609,24 @@ $
    - It's common to switch between branches during development.
 
    **Challenge:** Switch back to the `main` branch (previously master) and create a new file named `readme.txt` with some introductory content. Commit these changes with a message like "Updated project readme".
+
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
+$ git checkout main
+Switched to branch 'main'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git add .
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git commit -m"chore: Updated project readme"
+[main 98af5da] chore: Updated project readme
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$
+```
 
 4. **Local vs. Remote Branches:**
 
