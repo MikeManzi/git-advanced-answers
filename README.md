@@ -574,6 +574,16 @@ $ git log --graph
 
    **Challenge:** Create a new branch named `ft/new-feature` and switch to that branch.
 
+```bash
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (main)
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+Rich.com@DESKTOP-3TOVTRS MINGW64 ~/Documents/Things/The Gym/Git/advanced-git (ft/new-feature)
+$ 
+
+```
+
 2. **Working on the Feature Branch:**
 
    - Create a new file named `feature.txt` in this branch and add some content to it.
